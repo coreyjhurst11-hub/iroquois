@@ -135,7 +135,7 @@ export default function IroquoisOperators() {
         <Reveal delay={60}><h2 className="h2">Skin in the game — not an anonymous freelancer.</h2></Reveal>
         <div className="cards-3">
           {[
-            { t: "We build for ourselves", d: "Seneca is our own product — we live with every bug and win exactly like you would. We don’t ship what we wouldn’t run our own business on.", href: "https://senicaoracle.com", link: "senicaoracle.com" },
+            { t: "We build for ourselves", d: "Seneca is our own product — we live with every bug and win exactly like you would. We don’t ship what we wouldn’t run our own business on.", href: "https://senecaoracle.com", link: "senecaoracle.com" },
             { t: "Charlie’s build", d: "Traffic Miller Production — software Charles built and runs for a real operating business. Proof we ship, not just pitch.", href: "https://trafficmillerproduction.com", link: "trafficmillerproduction.com" },
             { t: "We speak operations", d: "Spreadsheets, payroll, margin, delivery errors, vendors — that’s our native language. We translate your real workflow into software, not the other way around." },
           ].map((c, i) => (
