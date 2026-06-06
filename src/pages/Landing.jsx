@@ -79,7 +79,6 @@ export default function IroquoisLanding() {
       </header>
 
       <main className="lp-hero" id="top">
-        
         <span className="lp-brk tl" /><span className="lp-brk br" />
         <div className="lp-eyebrow lp-load" style={{ "--d": "0ms" }}><span className="dot" /> Built by operators, not theorists</div>
         <h1 className="lp-h1">
@@ -183,10 +182,13 @@ export default function IroquoisLanding() {
         <Reveal><span className="lp-kick">WHY TRUST US</span></Reveal>
         <Reveal delay={60}><h2 className="lp-h2">Operators with skin in the game — not anonymous freelancers.</h2></Reveal>
         <div className="lp-cards three">
-          {[["Seneca", "We build and run our own software. Seneca is our own product — we feel every bug and win the same way you would."],
-            ["Community-built", "We lead and build tools for our local Chess Club community. Build for people you’ll see next week, and you build it right."],
-            ["Real operators", "10+ years scaling a $37M→$54M store program at The Home Depot, and a solo $20K→$60K/mo retail turnaround. We’ve made payroll."]].map(([t, d], i) => (
-            <Reveal key={t} delay={i * 70} className="lp-card"><div className="lp-dot" /><h3>{t}</h3><p>{d}</p></Reveal>
+          {[{ t: "Seneca", d: "We build and run our own software. Seneca is our own product — we feel every bug and win the same way you would.", href: "https://senicaoracle.com", link: "senicaoracle.com" },
+            { t: "Traffic Miller Production", d: "Charlie built and runs Traffic Miller Production — real software shipped for a real operating business.", href: "https://trafficmillerproduction.com", link: "trafficmillerproduction.com" },
+            { t: "Real operators", d: "10+ years scaling a $37M→$54M store program at The Home Depot, and a solo $20K→$60K/mo retail turnaround. We’ve made payroll." }].map((c, i) => (
+            <Reveal key={c.t} delay={i * 70} className="lp-card">
+              <div className="lp-dot" /><h3>{c.t}</h3><p>{c.d}</p>
+              {c.href && <a className="lp-cardlink" href={c.href} target="_blank" rel="noreferrer">{c.link} →</a>}
+            </Reveal>
           ))}
         </div>
         <Reveal delay={120}><Link to="/operators" className="lp-link">Meet the operators →</Link></Reveal>
@@ -262,7 +264,6 @@ const LANDING_CSS = `
 .lp-navcta{display:flex;align-items:center;gap:10px;}
 
 .lp-hero{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:clamp(40px,7vw,96px) clamp(20px,4vw,44px) 0;}
-.lp-side{position:absolute;left:-6px;top:130px;transform:rotate(-90deg);transform-origin:left;font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.3em;color:var(--low);}
 .lp-brk{position:absolute;width:26px;height:26px;border:2px solid rgba(52,227,176,.5);}
 .lp-brk.tl{top:clamp(28px,5vw,70px);left:clamp(8px,3vw,30px);border-right:0;border-bottom:0;}
 .lp-brk.br{bottom:-10px;right:clamp(8px,3vw,30px);border-left:0;border-top:0;}
@@ -311,6 +312,8 @@ const LANDING_CSS = `
 .lp-card{border:1px solid var(--line);border-radius:16px;padding:22px;background:linear-gradient(180deg,rgba(21,27,41,.5),rgba(10,14,24,.35));transition:border-color .3s,transform .3s;} .lp-card:hover{border-color:var(--line2);transform:translateY(-3px);}
 .lp-card-n{font-family:'JetBrains Mono';font-size:12px;color:var(--mint);} .lp-card h3{font-family:'Bricolage Grotesque';font-size:17px;margin:12px 0 8px;} .lp-card p{font-size:13.5px;color:var(--mid);line-height:1.5;}
 .lp-dot{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px var(--mint);}
+.lp-cardlink{display:inline-block;margin-top:12px;color:var(--mint);font-weight:600;font-size:13px;}
+.lp-cardlink:hover{text-decoration:underline;}
 .lp-link{display:inline-block;margin-top:24px;color:var(--mint);font-weight:600;font-size:14px;}
 
 .lp-faq-list{margin-top:36px;border-top:1px solid var(--line);}
@@ -329,6 +332,6 @@ const LANDING_CSS = `
 .lp-rv{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(.2,.6,.2,1),transform .7s cubic-bezier(.2,.6,.2,1);} .lp-rv.in{opacity:1;transform:none;}
 
 @media(max-width:960px){.lp-pkg-grid{grid-template-columns:1fr;}.lp-cards{grid-template-columns:1fr 1fr;}.lp-cards.three{grid-template-columns:1fr;}.lp-links{display:none;}.lp-feather{opacity:.08;}}
-@media(max-width:640px){.lp-cards{grid-template-columns:1fr;}.lp-navcta .btn-ghost{display:none;}.lp-step{flex-direction:column;gap:12px;}.lp-side{display:none;}}
+@media(max-width:640px){.lp-cards{grid-template-columns:1fr;}.lp-navcta .btn-ghost{display:none;}.lp-step{flex-direction:column;gap:12px;}}
 @media(prefers-reduced-motion:reduce){.lp-up{transform:none!important;animation:none!important;}.lp-load,.lp-rv{opacity:1!important;transform:none!important;animation:none!important;}.lp-feather,.lp-track,.lp-eyebrow .dot{animation:none!important;}}
 `;
