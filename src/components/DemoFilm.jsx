@@ -252,16 +252,13 @@ function DemoFilm() {
     return () => timers.forEach(clearTimeout);
   }, [started, playId]);
 
-  const replay = () => { setStarted(true); setPlayId((p) => p + 1); };
-  const labels = ["INTRO", "01 \u00b7 BUILD", "02 \u00b7 GO LIVE", "03 \u00b7 PROFIT", "FIN"];
-
   return (
     <div className="film" ref={ref}>
       <style>{FILM_CSS}</style>
       <style>{FRAME_CSS}</style>
       <div className="film-bar">
         <span className="film-tt"><span className="recdot" /> HOW IT WORKS</span>
-        <span className="film-tt mono">{labels[scene]} \u00b7 0:18</span>
+        <span className="film-tt mono">0:18</span>
       </div>
       <div className="film-screen">
         <div className="film-stage">
@@ -269,13 +266,9 @@ function DemoFilm() {
           {started && <div className="scene" key={playId + "-" + scene}>{renderScene(scene)}</div>}
           <div className="filmgrad" />
           {started && <div className="progress" key={"p-" + playId}><i style={{ animationDuration: TOTAL_MS + "ms" }} /></div>}
-          {!started && <div className="film-poster"><span className="film-play">\u25b6</span><span>scroll into view to play</span></div>}
+          {!started && <div className="film-poster"><span className="film-play">▶</span><span>scroll into view to play</span></div>}
         </div>
         <span className="brk tl" /><span className="brk tr" /><span className="brk bl" /><span className="brk br" />
-      </div>
-      <div className="film-foot">
-        <button className="lnk" onClick={replay}>\u21bb Replay</button>
-        <span className="film-cap">0:18 \u2014 from idea, to live, to income.</span>
       </div>
     </div>
   );
