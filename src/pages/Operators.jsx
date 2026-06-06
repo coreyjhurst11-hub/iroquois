@@ -135,11 +135,14 @@ export default function IroquoisOperators() {
         <Reveal delay={60}><h2 className="h2">Skin in the game — not an anonymous freelancer.</h2></Reveal>
         <div className="cards-3">
           {[
-            ["We build for ourselves", "Seneca is our own product — we live with every bug and every win exactly like you would. We don’t ship things we wouldn’t run our own business on."],
-            ["We build for our community", "We lead and build tools for our local Chess Club. When you build software for people you’ll see across the board next week, you build it to last."],
-            ["We speak operations", "Spreadsheets, payroll, margin, delivery errors, vendors — that’s our native language. We translate your real workflow into software, not the other way around."],
-          ].map(([t, d], i) => (
-            <Reveal key={t} delay={i * 80} className="card"><div className="trust-dot" /><h3>{t}</h3><p>{d}</p></Reveal>
+            { t: "We build for ourselves", d: "Seneca is our own product — we live with every bug and win exactly like you would. We don’t ship what we wouldn’t run our own business on.", href: "https://senicaoracle.com", link: "senicaoracle.com" },
+            { t: "Charlie’s build", d: "Traffic Miller Production — software Charles built and runs for a real operating business. Proof we ship, not just pitch.", href: "https://trafficmillerproduction.com", link: "trafficmillerproduction.com" },
+            { t: "We speak operations", d: "Spreadsheets, payroll, margin, delivery errors, vendors — that’s our native language. We translate your real workflow into software, not the other way around." },
+          ].map((c, i) => (
+            <Reveal key={c.t} delay={i * 80} className="card">
+              <div className="trust-dot" /><h3>{c.t}</h3><p>{c.d}</p>
+              {c.href && <a className="card-link" href={c.href} target="_blank" rel="noreferrer">{c.link} →</a>}
+            </Reveal>
           ))}
         </div>
       </section>
@@ -227,6 +230,7 @@ const CSS = `
 .cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px;}
 .card{border:1px solid var(--line);border-radius:16px;padding:24px;background:linear-gradient(180deg,rgba(21,27,41,.5),rgba(10,14,24,.35));transition:border-color .3s,transform .3s;} .card:hover{border-color:var(--line-2);transform:translateY(-3px);}
 .trust-dot{width:9px;height:9px;border-radius:50%;background:var(--mint);box-shadow:0 0 14px var(--mint);margin-bottom:14px;} .card h3{font-family:'Bricolage Grotesque';font-size:18px;margin-bottom:9px;} .card p{font-size:13.5px;color:var(--text-mid);line-height:1.55;}
+.card-link{display:inline-block;margin-top:12px;color:var(--mint);font-weight:600;font-size:13px;text-decoration:none;} .card-link:hover{text-decoration:underline;}
 
 .cta-final{position:relative;z-index:2;max-width:1180px;margin:clamp(70px,9vw,120px) auto 0;padding:0 clamp(20px,4vw,44px);}
 .cta-box{border:1px solid var(--line-2);border-radius:24px;padding:clamp(36px,5vw,64px);text-align:center;background:radial-gradient(ellipse 80% 120% at 50% 0%,rgba(52,227,176,.1),transparent 70%),linear-gradient(180deg,rgba(21,27,41,.7),rgba(10,14,24,.6));}
