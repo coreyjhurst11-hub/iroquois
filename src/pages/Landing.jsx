@@ -182,7 +182,7 @@ export default function IroquoisLanding() {
         <Reveal><span className="lp-kick">WHY TRUST US</span></Reveal>
         <Reveal delay={60}><h2 className="lp-h2">Operators with skin in the game — not anonymous freelancers.</h2></Reveal>
         <div className="lp-cards three">
-          {[{ t: "Seneca", d: "We build and run our own software. Seneca is our own product — we feel every bug and win the same way you would.", href: "https://senicaoracle.com", link: "senicaoracle.com" },
+          {[{ t: "Seneca", d: "We build and run our own software. Seneca is our own product — we feel every bug and win the same way you would.", href: "https://senecaoracle.com", link: "senecaoracle.com" },
             { t: "Traffic Miller Production", d: "Charlie built and runs Traffic Miller Production — real software shipped for a real operating business.", href: "https://trafficmillerproduction.com", link: "trafficmillerproduction.com" },
             { t: "Real operators", d: "10+ years scaling a $37M→$54M store program at The Home Depot, and a solo $20K→$60K/mo retail turnaround. We’ve made payroll." }].map((c, i) => (
             <Reveal key={c.t} delay={i * 70} className="lp-card">
