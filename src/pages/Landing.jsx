@@ -79,7 +79,7 @@ export default function IroquoisLanding() {
       </header>
 
       <main className="lp-hero" id="top">
-        <span className="lp-side">EST. — CUSTOM SOFTWARE STUDIO</span>
+        
         <span className="lp-brk tl" /><span className="lp-brk br" />
         <div className="lp-eyebrow lp-load" style={{ "--d": "0ms" }}><span className="dot" /> Built by operators, not theorists</div>
         <h1 className="lp-h1">
