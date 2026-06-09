@@ -258,7 +258,6 @@ function DemoFilm() {
       <style>{FRAME_CSS}</style>
       <div className="film-bar">
         <span className="film-tt"><span className="recdot" /> HOW IT WORKS</span>
-        <span className="film-tt mono">0:18</span>
       </div>
       <div className="film-screen">
         <div className="film-stage">
