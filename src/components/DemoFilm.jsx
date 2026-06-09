@@ -222,7 +222,6 @@ function renderScene(scene) {
           <div className="mask"><span className="big">DEMO FIRST.</span></div>
           <div className="subline big-sub">Pay <b className="hl">$1,000</b> only if you love it.</div>
           <div className="endrow"><span className="wm">IROQUOIS</span><span className="sep">·</span><span>{PHONE_1.display}</span></div>
-          <a className="btn btn-solid endcta" href="#book">Book my free demo</a>
           <div className="endpop film-slogan" style={{ animationDelay: "1.05s" }}>BUILD FOR THE FUTURE</div>
         </div>
       </div>
@@ -249,7 +248,8 @@ function DemoFilm() {
     if (!started) return;
     setScene(0);
     const timers = SCENE_TIMES.slice(1).map((t, i) => setTimeout(() => setScene(i + 1), t));
-    return () => timers.forEach(clearTimeout);
+    const loop = setTimeout(() => setPlayId((p) => p + 1), TOTAL_MS); // endless loop
+    return () => { timers.forEach(clearTimeout); clearTimeout(loop); };
   }, [started, playId]);
 
   return (
