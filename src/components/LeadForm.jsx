@@ -65,7 +65,7 @@ export default function LeadForm({ open, onClose }) {
               or call <a href="tel:5188171453">(518) 817-1453</a>
               {CALENDLY_URL ? <> · <a href={CALENDLY_URL} target="_blank" rel="noreferrer">book a call →</a></> : null}
             </div>
-            <div className="lf-fine">No card · no commitment · you only pay $1,000 if you approve the demo.</div>
+            <div className="lf-fine">No card · no commitment · you only pay once you approve the demo.</div>
           </>
         ) : (
           <div className="lf-done">
