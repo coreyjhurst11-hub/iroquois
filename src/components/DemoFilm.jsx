@@ -8,7 +8,7 @@ import React, { useState, useRef, useEffect } from "react";
  *   1 BUILD  · Two operators hand-code your app & site
  *   2 LIVE   · It launches
  *   3 PROFIT · It turns into revenue
- *   4 END    · Demo first · $1,000 only if you love it
+ *   4 END    · Demo first · pay only when you love it
  *
  * Drop <DemoVideoModal open onClose/> into the landing page and point the CTA
  * button's onClick at setOpen(true).
@@ -220,7 +220,7 @@ function renderScene(scene) {
             </svg>
           </div>
           <div className="mask"><span className="big">DEMO FIRST.</span></div>
-          <div className="subline big-sub">Pay <b className="hl">$1,000</b> only if you love it.</div>
+          <div className="subline big-sub">See it free. <b className="hl">Pay only when you love it.</b></div>
           <div className="endrow"><span className="wm">IROQUOIS</span><span className="sep">·</span><span>{PHONE_1.display}</span></div>
           <div className="endpop film-slogan" style={{ animationDelay: "1.05s" }}>BUILD FOR THE FUTURE</div>
         </div>
