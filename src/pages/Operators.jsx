@@ -153,7 +153,7 @@ export default function IroquoisOperators() {
           <div className="cta-box">
             <span className="kicker">LET’S BUILD</span>
             <h2 className="h2">Tell us what’s slowing your business down.</h2>
-            <p>We’ll build you a working demo — free. You only pay our flat $1,000 fee if you approve it. We build any software, for any business, large or small.</p>
+            <p>We’ll build you a working demo — free. Websites start at $200 with hosting and a domain included; custom apps and software run $500–$1,500 by scope. You only pay once you approve it — and we stay on as your growth partner as your business grows.</p>
             <div className="cta-row center">
               <button onClick={() => setLeadOpen(true)} className="btn btn-solid btn-lg">Get my free demo</button>
               <a href={`tel:${PHONE_1.tel}`} className="btn btn-line btn-lg">✆ or call {PHONE_1.display}</a>
