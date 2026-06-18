@@ -97,7 +97,7 @@ export default function IroquoisLanding() {
           <span className="lp-line"><span className="lp-up" style={{ "--d": "60ms" }}>We don’t build</span></span>
           <span className="lp-line"><span className="lp-up" style={{ "--d": "190ms" }}>and leave. <span className="lp-grad">We grow with you.</span></span></span>
         </h1>
-        <Reveal delay={320}><p className="lp-sub">Custom websites from <span className="lp-gold">$200</span> — hosting and domain included. Apps, CRMs, and dashboards from <span className="lp-gold">$500</span>. We start with a working demo, free — then stay on as the team that keeps improving it as your business grows. You own everything.</p></Reveal>
+        <Reveal delay={320}><p className="lp-sub">Custom websites from <span className="lp-gold">$300</span> — hosting and domain included. Apps, CRMs, and dashboards from <span className="lp-gold">$500</span>. We start with a working demo, free — then stay on as the team that keeps improving it as your business grows. You own everything.</p></Reveal>
         <Reveal delay={440}><div className="lp-cta"><button onClick={openLead} className="btn btn-solid btn-lg">Get my free demo</button><a href="#film" className="lp-text-link">Watch how it works ↓</a></div></Reveal>
         <a href="#statement" className="lp-scroll" aria-label="Scroll"><span /></a>
       </main>
@@ -133,7 +133,7 @@ export default function IroquoisLanding() {
         <div className="lp-pkg-grid">
           <Reveal className="lp-pkg-col tier in">
             <div className="lp-tier-tag">WEBSITES</div>
-            <div className="lp-tier-price">from <span className="lp-gold">$200</span></div>
+            <div className="lp-tier-price">from <span className="lp-gold">$300</span></div>
             <p className="lp-tier-note">Hosting &amp; domain name included.</p>
             <ul>
               <li>Custom design — modern, fast, mobile &amp; desktop</li>
@@ -167,7 +167,7 @@ export default function IroquoisLanding() {
         <Reveal delay={60}><h2 className="lp-h2">We don’t disappear after launch.</h2></Reveal>
         <div className="lp-cards">
           {[["We stay on", "Launch is the start, not the finish. We keep refining, fixing, and adding as your business changes — you’re never left holding broken code."],
-            ["We grow with you", "Begin with a $200 site, then scale into apps, dashboards, and automation when you’re ready. One team the whole way up."],
+            ["We grow with you", "Begin with a $300 site, then scale into apps, dashboards, and automation when you’re ready. One team the whole way up."],
             ["Your tech team, on call", "Skip hiring a developer. You get an operator-led build team whenever you need one — that actually understands business."]].map(([t, d], i) => (
             <Reveal key={t} delay={i * 80} className="lp-card"><div className="lp-dot" /><h3>{t}</h3><p>{d}</p></Reveal>
           ))}
@@ -181,7 +181,7 @@ export default function IroquoisLanding() {
         <div className="lp-steps">
           {[["Tell us your goal", "One call. Name what you want — a website, a CRM, a dashboard, or the bottleneck eating your week.", "Free"],
             ["We build your demo", "We hand-code a working demo of your exact solution and put it in your hands. Click it, test it, judge it — at $0.", "Free"],
-            ["Go live — and keep growing", "Approve it and we ship it live. Then we stay on as your partner, improving and expanding it as your business grows.", "From $200"]].map(([t, d, tag], i) => (
+            ["Go live — and keep growing", "Approve it and we ship it live. Then we stay on as your partner, improving and expanding it as your business grows.", "From $300"]].map(([t, d, tag], i) => (
             <Reveal key={t} delay={i * 90} className="lp-step">
               <div className="lp-step-n">{String(i + 1).padStart(2, "0")}</div>
               <div className="lp-step-b"><div className="lp-step-h"><h3>{t}</h3><span className={`lp-tag ${tag === "Free" ? "free" : "paid"}`}>{tag}</span></div><p>{d}</p></div>
@@ -212,10 +212,10 @@ export default function IroquoisLanding() {
         <Reveal><div className="lp-kick">QUESTIONS</div></Reveal>
         <Reveal delay={60}><h2 className="lp-h2">Pricing, the demo, and the partnership.</h2></Reveal>
         <div className="lp-faq-list">
-          <Faq q="How much does it cost?" a="Websites start at $200, with hosting and a domain name included. Custom apps and software — CRMs, dashboards, internal tools — run $500 to $1,500 depending on scope. You see a working demo first and only pay once you approve it." />
+          <Faq q="How much does it cost?" a="Websites start at $300, with hosting and a domain name included. Custom apps and software — CRMs, dashboards, internal tools — run $500 to $1,500 depending on scope. You see a working demo first and only pay once you approve it." />
           <Faq q="Is the demo really free?" a="Yes. We build a working demo before you pay anything, and you only pay once you’ve seen, tested, and approved it. Not right? You walk away owing nothing." />
           <Faq q="Do you stick around after launch?" a="That’s the whole point. We’re a growth partner, not a one-and-done vendor — we keep refining and adding features as your business grows, and you’re never left with broken code." />
-          <Faq q="Can I start small and scale up?" a="Absolutely. Many clients start with a $200 website and grow into apps, dashboards, and automation with us over time. Same team the whole way." />
+          <Faq q="Can I start small and scale up?" a="Absolutely. Many clients start with a $300 website and grow into apps, dashboards, and automation with us over time. Same team the whole way." />
           <Faq q="Do you use templates or no-code?" a="No. Everything is custom-coded — faster, lighter, and fully yours to grow. Template builders bloat, break, and box you in." />
           <Faq q="Who owns the code?" a="You do, the moment you approve and pay. No lock-in, ever." />
         </div>
